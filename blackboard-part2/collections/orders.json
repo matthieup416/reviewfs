@@ -1,0 +1,101 @@
+[
+    {
+        "_id": {
+            "$oid": "625ea9ca38d6a37769946511"
+        },
+        "total": 149,
+        "shippingFees": 15,
+        "isPaid": true,
+        "purchaseDate": {
+            "$date": "2019-07-24T08:24:19.137Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "625ea9ca38d6a37769946512"
+        },
+        "total": 299,
+        "shippingFees": 15,
+        "isPaid": true,
+        "purchaseDate": {
+            "$date": "2020-10-26T08:24:19.137Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "625ea9ca38d6a37769946513"
+        },
+        "total": 869,
+        "shippingFees": 5,
+        "isPaid": false,
+        "purchaseDate": {
+            "$date": "2019-08-01T12:24:19.137Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "625ea9ca38d6a37769946524"
+        },
+        "total": 95,
+        "shippingFees": 15,
+        "isPaid": false,
+        "purchaseDate": {
+            "$date": "2022-03-15T22:30:19.137Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "625ea9ca38d6a37769946515"
+        },
+        "total": 1789,
+        "shippingFees": 5,
+        "isPaid": false,
+        "purchaseDate": {
+            "$date": "2021-11-11T11:11:11.137Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "625ea9ca38d6a37769946516"
+        },
+        "total": 399,
+        "shippingFees": 5,
+        "isPaid": false,
+        "purchaseDate": {
+            "$date": "2022-02-14T10:29:39.137Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "625ea9ca38d6a37769946517"
+        },
+        "total": 259,
+        "shippingFees": 15,
+        "isPaid": true,
+        "purchaseDate": {
+            "$date": "2022-04-02T12:12:12.137Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "625ea9ca38d6a37769946518"
+        },
+        "total": 1100,
+        "shippingFees": 5,
+        "isPaid": false,
+        "purchaseDate": {
+            "$date": "2018-08-22T22:22:19.137Z"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "625ea9ca38d6a37769946519"
+        },
+        "total": 110,
+        "shippingFees": 15,
+        "isPaid": false,
+        "purchaseDate": {
+            "$date": "2018-06-20T10:10:10.137Z"
+        }
+    }
+]
