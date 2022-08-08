@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+
 import Head from 'next/head';
 import Article from './Article';
 import TopArticle from './TopArticle';
@@ -7,6 +9,7 @@ import styles from '../styles/Home.module.css';
 function Home() {
   const [articlesData, setArticlesData] = useState([]);
   const [topArticle, setTopArticle] = useState({});
+  const bookmarks = useSelector((state) => state.bookmarks.value);
 
   useEffect(() => {
     fetch('http://localhost:3000/articles')
@@ -17,9 +20,18 @@ function Home() {
       });
   }, []);
 
+ 
   const articles = articlesData.map((data, i) => {
-    return <Article key={i} {...data} />;
+    const isBookmarked = bookmarks.some(bookmark => bookmark.title === data.title);
+    return <Article key={i} {...data} isBookmarked={isBookmarked} />;
   });
+
+  let topArticleDisplay;
+  if (bookmarks.some(bookmark => bookmark.title === topArticle.title)) {
+    topArticleDisplay = <TopArticle {...topArticle} isBookmarked={true} />
+  } else {
+    topArticleDisplay = <TopArticle {...topArticle} isBookmarked={false} />
+  }
 
   return (
     <div>
@@ -27,8 +39,7 @@ function Home() {
         <title>Morning News - Home</title>
       </Head>
 
-      <TopArticle {...topArticle} />
-
+{topArticleDisplay}
       <div className={styles.articlesContainer}>
         {articles}
       </div>
