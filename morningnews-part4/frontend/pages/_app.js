@@ -1,15 +1,15 @@
-import '../styles/globals.css';
-import Head from 'next/head';
-import Header from '../components/Header';
+import '../styles/globals.css'
+import Head from 'next/head'
+import Header from '../components/Header'
 
-import { Provider } from 'react-redux';
-import { configureStore } from '@reduxjs/toolkit';
-import bookmarks from '../reducers/bookmarks';
-import user from '../reducers/user';
-
+import { Provider } from 'react-redux'
+import { configureStore } from '@reduxjs/toolkit'
+import bookmarks from '../reducers/bookmarks'
+import user from '../reducers/user'
+//
 const store = configureStore({
   reducer: { bookmarks, user },
-});
+})
 
 function App({ Component, pageProps }) {
   return (
@@ -20,7 +20,7 @@ function App({ Component, pageProps }) {
       <Header />
       <Component {...pageProps} />
     </Provider>
-  );
+  )
 }
 
-export default App;
+export default App

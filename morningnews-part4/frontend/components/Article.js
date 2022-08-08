@@ -11,15 +11,11 @@ function Article(props) {
 
   const handleBookmarkClick = () => {
     if (!user.token) {
-      if (props.isBookmarked) {
-        dispatch(removeBookmark(props))
-      } else {
-        dispatch(addBookmark(props))
-      }
-
       return
     }
     //
+    //
+
     fetch(`http://localhost:3000/users/canBookmark/${user.token}`)
       .then((response) => response.json())
       .then((data) => {
